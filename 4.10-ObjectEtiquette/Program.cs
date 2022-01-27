@@ -17,6 +17,7 @@ class Account
     }
 }
 
+/*
 class Point
 {
     public int x;
@@ -35,16 +36,27 @@ class Point
         }
     }
 }
+*/
 
-
+public class Counter
+{
+    public int Data = 0;
+    public void Count()
+    {
+        this.Data = Data + 1;
+    }
+}
 
 class Bank
 {
     public static void Main()
     {
+        //Objects and ToString
         Account a = new Account("Rob", 25);
         Console.WriteLine(a);
 
+        //Objects and Testing for equals
+        /*
         Point spaceshipPosition = new Point();
         spaceshipPosition.x = 1;
         spaceshipPosition.y = 2;
@@ -62,5 +74,11 @@ class Bank
         {
             Console.WriteLine("Bang");
         }
+        */
+
+        //Objects and this
+        Counter c = new Counter();
+        c.Count();
+        Console.WriteLine("Count: " + c.Data);
     }
 }
