@@ -17,7 +17,6 @@ class Account
     }
 }
 
-/*
 class Point
 {
     public int x;
@@ -36,7 +35,6 @@ class Point
         }
     }
 }
-*/
 
 public class Counter
 {
@@ -56,7 +54,6 @@ class Bank
         Console.WriteLine(a);
 
         //Objects and Testing for equals
-        /*
         Point spaceshipPosition = new Point();
         spaceshipPosition.x = 1;
         spaceshipPosition.y = 2;
@@ -74,7 +71,6 @@ class Bank
         {
             Console.WriteLine("Bang");
         }
-        */
 
         //Objects and this
         Counter c = new Counter();
