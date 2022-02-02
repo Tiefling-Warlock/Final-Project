@@ -2,7 +2,7 @@
 
 class Bank
 {
-    public static void WasMain()
+    public static void FormerMain()
     {
         StaffMember s = new StaffMember();
         s.SetAge(21);
