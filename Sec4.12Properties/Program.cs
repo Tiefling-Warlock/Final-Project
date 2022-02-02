@@ -2,7 +2,7 @@
 
 class Bank
 {
-    public static void Main()
+    public static void WasMain()
     {
         StaffMember s = new StaffMember();
         s.SetAge(21);
@@ -48,5 +48,62 @@ public class StaffMember
         {
             return this.ageValue*12;
         }
+    }
+    public bool setAge(int inAge)
+    {
+        if((inAge > 0) && (inAge < 120))
+        {
+            this.age = inAge;
+            return true;
+        }
+        return false;
+    }
+}
+
+interface IStaff
+{
+    int Age
+    {
+        get;
+        set;
+    }
+}
+
+
+public delegate decimal CalculateFee(decimal balance);
+public class DelegateDemo
+{
+    public static decimal RipoffFee(decimal balance)
+    {
+        Console.WriteLine("Calling the Ripoff Method");
+        if (balance < 0)
+        {
+            return 100;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    public static decimal FriendlyFee(decimal balance)
+    {
+        Console.WriteLine("Calling the Friendly Method");
+        if(balance < 0)
+        {
+            return 10;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+    public static void Main()
+    {
+        CalculateFee calc;
+
+        calc = new CalculateFee(RipoffFee);
+        calc(-1); // this will call the Ripoff method
+        calc = new CalculateFee(FriendlyFee);
+        calc(-1); //this will call the Friendly method
     }
 }
